@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "This project was written after listening to Nomad Coders - React Native lectures."
   }
 }
