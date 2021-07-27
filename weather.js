@@ -73,7 +73,7 @@ const weatherOptions = {
   },
 };
 
-export default function Weather({ temp, condition }) {
+export default function Weather({ temp, condition, name }) {
   return (
     <LinearGradient
       colors={weatherOptions[condition].gradient}
@@ -81,7 +81,9 @@ export default function Weather({ temp, condition }) {
     >
       <StatusBar barStyle="light-content" />
       <View style={styles.halfContainer}>
+        <Text style={styles.name}>{name}</Text>
         <MaterialCommunityIcons
+          style={styles.icon}
           name={weatherOptions[condition].iconName}
           size={96}
           color="white"
@@ -120,6 +122,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  name: {
+    fontSize: 35,
+    color: "white",
+  },
   temp: {
     fontSize: 42,
     color: "white",
@@ -128,6 +134,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  icon: {
+    padding: 10,
   },
   title: {
     color: "white",
